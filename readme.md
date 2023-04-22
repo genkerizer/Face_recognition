@@ -192,4 +192,4 @@ Dataloader:
 
 + [Nguyễn Đăng Khoa](22C15010@student.hcmus.edu.vn)
 
-+ [Phạm Minh Thạch](22C15018@student.hcmus.edu.vn)
++ [Nguyễn Hoàng Linh](22C11009@student.hcmus.edu.vn)
