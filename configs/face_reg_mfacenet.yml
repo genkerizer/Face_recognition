@@ -1,0 +1,42 @@
+Global:
+  use_pretrain: False
+  num_epoch: 10
+  warmup_epoch: 0
+  checkpoints: checkpoints/202330301
+
+
+Architecture:
+  Backbone:
+    name: MobileFaceNet
+    num_features: 512
+    blocks: [1, 4, 6, 2]
+    scale: 2
+  Head:
+    name: PartialFC_V2
+    embedding_size: 512
+    num_classes: 93431
+    sample_rate: 1.0
+
+
+Loss:
+  margin_list: [1.0, 0.5, 0.0]
+  interclass_filtering_threshold: 0
+
+
+Save:
+  save_iter: 3000
+
+
+Optimizer:
+  gradient_acc: 1.0
+  lr: 0.02
+  weight_decay: 0.0005
+  last_epoch: -1
+
+Dataloader:
+  name: loader
+  num_image: 5800000
+  batch_size: 64
+  root_dir: DATASET/faces_emore/
+
+
